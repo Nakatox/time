@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="script.js"></script>
+</head>
+<body>
+    <div class="scene">
+        <div class="sablierSeconds">
+            <div class="hourglass top">
+                <div class="sandSeconds"></div>
+              </div>
+        </div>
+        <div class="sablierMinutes">
+            <div class="hourglass top">
+                <div class="sandMinutes"></div>
+              </div>
+        </div>  
+        <div class="sablierHours">
+            <div class="hourglass top">
+                <div class="sandHours"></div>
+              </div>
+        </div>
+        <div class="sablierDays">
+            <div class="hourglass top">
+                <div class="sandDays"></div>
+              </div>
+        </div>
+        <div class="sablierMonths">
+            <div class="hourglass top">
+                <div class="sandMonths"></div>
+            </div>
+        </div>
+    </div>
+</body>
+
+<style>
+       
+    .scene{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        div{
+            margin: 0 10px;
+        }
+    }
+
+    .center {
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+}
+
+.hourglass {
+  height: 200px;
+  width: 100px;
+  border-bottom: 10px solid #5b4c34;
+  border-top: 10px solid #5b4c34;
+  position: relative;
+  overflow: hidden;
+  background: #7de3f5;
+}
+
+.hourglass::after {
+  content: '';
+  border: 100px solid transparent;
+  border-left: 50px solid white;
+  border-right: 50px solid white;
+  position: absolute;
+  bottom: 0;
+}
+
+.hourglass>div::before {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 100px;
+  height: 100px;
+  background-color: #f0ca7d;    
+}
+.sandSeconds::before {
+    animation-name: var(--sandSecondsAnimation-name);
+    animation-duration: var(--sandSecondsAnimation-duration);
+    animation-iteration-count: var(--sandSecondsAnimation-iteration-count);
+    animation-timing-function: var(--sandSecondsAnimation-timing-function);
+}
+.sandMinutes::before {
+    animation-name: var(--sandMinutesAnimation-name);
+    animation-duration: var(--sandMinutesAnimation-duration);
+    animation-iteration-count: var(--sandMinutesAnimation-iteration-count);
+    animation-timing-function: var(--sandMinutesAnimation-timing-function);
+}
+.sandHours::before {
+    animation-name: var(--sandHoursAnimation-name);
+    animation-duration: var(--sandHoursAnimation-duration);
+    animation-iteration-count: var(--sandHoursAnimation-iteration-count);
+    animation-timing-function: var(--sandHoursAnimation-timing-function);
+}
+.sandDays::before {
+    animation-name: var(--sandDaysAnimation-name);
+    animation-duration: var(--sandDaysAnimation-duration);
+    animation-iteration-count: var(--sandDaysAnimation-iteration-count);
+    animation-timing-function: var(--sandDaysAnimation-timing-function);
+}
+
+
+.hourglass>div::after {
+  content: '';
+  position: absolute; 
+  border-right: 50px solid transparent;
+  border-top: 400px solid rgba(255,255,255, 0.4);
+}
+
+@keyframes rotateGlass {
+  40%, 100% {transform: rotate(0deg);}
+  50%, 90% {transform: rotate(180deg);}
+}
+
+@-webkit-keyframes dropsand {
+  25%, 50% {
+    bottom: 0;
+    top: 50%;
+  }
+  0%, 75% {
+    top: 0;
+    bottom: 50%; 
+  }
+}
+</style>
+</html>

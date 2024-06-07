@@ -7,38 +7,99 @@
     <script src="script.js"></script>
 </head>
 <body>
-    <div class="scene">
-        <div class="sablierSeconds">
-            <div class="hourglass top">
-                <div class="sandSeconds"></div>
-              </div>
-        </div>
-        <div class="sablierMinutes">
-            <div class="hourglass top">
-                <div class="sandMinutes"></div>
-              </div>
-        </div>  
-        <div class="sablierHours">
-            <div class="hourglass top">
-                <div class="sandHours"></div>
-              </div>
-        </div>
-        <div class="sablierDays">
-            <div class="hourglass top">
-                <div class="sandDays"></div>
-              </div>
-        </div>
-        <div class="sablierMonths">
-            <div class="hourglass top">
-                <div class="sandMonths"></div>
+
+    <div class="fond">
+      <div class="top"></div>
+      <div>
+        <div class="column"></div>
+        <div class="shelf">
+          <div>
+            <div class="hourglasses-1">
             </div>
+            <div class="bottom"></div>
+          </div>
+          <div class="quote">
+            <div id="counter" class="text"></div>
+            <div class="bottom"></div>
+          </div>
+          <div>
+            <div class="hourglasses-2">
+            </div>
+            <div class="bottom"></div>
+          </div>
+          <div>
+            <div class="hourglasses-3">
+            </div>
+            <div class="bottom"></div>
+          </div>
+          <div class="quote">
+            <div class="text" >
+              It takes only half a day to get there!
+            </div>
+            <div class="bottom"></div>
+          </div>
+          <div>
+            <div class="hourglasses-4">
+            </div>
+            <div class="bottom"></div>
+          </div>
+          <div>
+            <div class="hourglasses-5">
+            </div>
+            <div class="bottom"></div>
+          </div>
+          <div class="quote">
+            <div class="text" >
+              You just have to stay one year here to see the hourglass on top of my shelf turn.
+            </div>
+            <div class="bottom"></div>
+          </div>
+          <div>
+            <div class="hourglasses-6">
+            </div>
+            <div class="bottom"></div>
+          </div>
+          <div>
+            <div class="hourglasses-7">
+            </div>
+            <div class="bottom"></div>
+          </div>
+          <div class="quote">
+            <div class="text" >
+              It will take more than a THOUSAND year for the last hourglass to rotate.
+            </div>
+            <div class="bottom"></div>
+          </div>
         </div>
+        <div class="column"></div>
+      </div>
     </div>
 </body>
 
 <style>
        
-    .scene{
+       @import url('https://fonts.googleapis.com/css2?family=Jacquard+12&display=swap');
+
+  .quote {
+    
+    .text {
+      height: 150px !important;
+
+    font-family: "Jacquard 12", system-ui;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 38px;
+  
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  }
+
+
+
+       .scene{
         display: flex;
         justify-content: center;
         align-items: center;
@@ -47,6 +108,74 @@
             margin: 0 10px;
         }
     }
+    body{
+        background-color: #84adff;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+    }
+    .fond{
+      display: flex;
+      flex-direction: column;
+      .top{
+        width: 800px;
+        height: 30px;
+        background-color: rgb(127, 74, 10);
+        box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+      }
+      >div{
+        display: flex;
+        height: 2500px;
+        justify-content: space-between;
+        width: 800px;
+        background-color: #f0ca7d;
+        flex-direction: row;
+        box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+        .shelf{
+          display: flex;
+          flex-direction: column;
+          > div{
+            width: 750px;
+            height: 250px;
+            display: flex;
+            flex-direction: column;
+            >div{
+              display: flex;
+              justify-content: space-between;
+            }
+            .bottom{
+                width: 100%;
+                height: 30px;
+                background-color: rgb(127, 74, 10);
+                box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+            }
+          }
+        }
+        .rowDiv{
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+            width: 100%;
+            justify-content: space-between;
+            .row{
+                width: 100%;
+                height: 30px;
+                background-color: rgb(127, 74, 10);
+                box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+            }
+        }
+
+            .column{
+                width: 30px;
+                height: 100%;
+                background-color: rgb(127, 74, 10);
+                box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+            }
+          }
+
+    }
+
 
     .center {
   display: flex;
@@ -68,8 +197,8 @@
 .hourglass::after {
   content: '';
   border: 100px solid transparent;
-  border-left: 50px solid white;
-  border-right: 50px solid white;
+  border-left: 50px solid #f0ca7d;
+  border-right: 50px solid #f0ca7d;
   position: absolute;
   bottom: 0;
 }
@@ -80,33 +209,8 @@
   display: block;
   width: 100px;
   height: 100px;
-  background-color: #f0ca7d;    
+  background-color: #fcef56;    
 }
-.sandSeconds::before {
-    animation-name: var(--sandSecondsAnimation-name);
-    animation-duration: var(--sandSecondsAnimation-duration);
-    animation-iteration-count: var(--sandSecondsAnimation-iteration-count);
-    animation-timing-function: var(--sandSecondsAnimation-timing-function);
-}
-.sandMinutes::before {
-    animation-name: var(--sandMinutesAnimation-name);
-    animation-duration: var(--sandMinutesAnimation-duration);
-    animation-iteration-count: var(--sandMinutesAnimation-iteration-count);
-    animation-timing-function: var(--sandMinutesAnimation-timing-function);
-}
-.sandHours::before {
-    animation-name: var(--sandHoursAnimation-name);
-    animation-duration: var(--sandHoursAnimation-duration);
-    animation-iteration-count: var(--sandHoursAnimation-iteration-count);
-    animation-timing-function: var(--sandHoursAnimation-timing-function);
-}
-.sandDays::before {
-    animation-name: var(--sandDaysAnimation-name);
-    animation-duration: var(--sandDaysAnimation-duration);
-    animation-iteration-count: var(--sandDaysAnimation-iteration-count);
-    animation-timing-function: var(--sandDaysAnimation-timing-function);
-}
-
 
 .hourglass>div::after {
   content: '';
@@ -116,16 +220,16 @@
 }
 
 @keyframes rotateGlass {
-  40%, 100% {transform: rotate(0deg);}
-  50%, 90% {transform: rotate(180deg);}
+  45%, 100% {transform: rotate(0deg);}
+  50%, 95% {transform: rotate(180deg);}
 }
 
 @-webkit-keyframes dropsand {
-  25%, 50% {
+  49%, 50% {
     bottom: 0;
     top: 50%;
   }
-  0%, 75% {
+  0%, 99% {
     top: 0;
     bottom: 50%; 
   }
